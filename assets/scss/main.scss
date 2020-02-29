@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    background: rgb(247, 234, 223);
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 100vh;
+
+    .question {
+        width: 600px;
+        &_answers {
+            display: flex;
+            flex-direction: column;
+            margin: 15px 0px;
+
+            label {
+                padding: 15px;
+                margin: 5px 0px;
+                background: rgb(116, 116, 116);
+
+                &.correct {
+                    background: seagreen;
+                }
+                &.incorrect {
+                    background: red;
+                }
+            }
+        }
+        &_actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
