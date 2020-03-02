@@ -71,8 +71,16 @@ action_btn.addEventListener("click", function () {
 });
 
 next_btn.addEventListener("click", function () {
-    displayQuestion
+    if (currentQuestion == questionsCount) {
+        document.getElementById("question").classList.add("hide")
+        document.getElementById("scores").classList.remove("hide")
+        document.getElementById("score").innerHTML = score + "/" + questionsCount;
+        return;
+    }
 
+    displayQuestion(questions[currentQuestion]);
+    action_btn.classList.remove("hide");
+    this.classList.add("hide");
 })
 
 // Initialisation
