@@ -58,4 +58,8 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+
+.hide {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */

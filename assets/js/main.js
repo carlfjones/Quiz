@@ -1,6 +1,7 @@
 let questions;
 let questionsCount;
 let currentQuestion;
+let score = 0;
 
 let question_title_elem = document.getElementById("title");
 let answers_elem = document.getElementById("answers");
@@ -54,12 +55,25 @@ action_btn.addEventListener("click", function () {
         let question = questions[currentQuestion];
 
         if (answer.checked && answer.value == question.correct) {
-            console.log("correct");
-            
             answer.parentNode.classList.add("correct");
+            score++;
+        } else if (answer.checked && answer.value != question.correct) {
+            answer.parentNode.classList.add("incorrect");
         }
+
+        answer.disabled = true;
     }
+    currentQuestion++;
+
+    let next_btn = document.getElementById("next_btn");
+    next_btn.classList.remove("hide");
+    this.classList.add("hide");
 });
+
+next_btn.addEventListener("click", function () {
+    displayQuestion
+
+})
 
 // Initialisation
 getQuestions();
