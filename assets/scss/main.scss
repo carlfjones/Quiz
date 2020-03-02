@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: rgb(247, 234, 223);
+    background: rgb(231, 231, 231);
 }
 
 .quiz {
@@ -21,7 +21,7 @@ body {
             label {
                 padding: 15px;
                 margin: 5px 0px;
-                background: rgb(116, 116, 116);
+                background: rgb(201, 201, 201);
 
                 &.correct {
                     background: seagreen;

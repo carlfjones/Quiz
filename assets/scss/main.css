@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #f7eadf;
+  background: #e7e7e7;
 }
 
 .quiz {
@@ -39,7 +39,7 @@ body {
 .quiz .question_answers label {
   padding: 15px;
   margin: 5px 0px;
-  background: #747474;
+  background: #c9c9c9;
 }
 
 .quiz .question_answers label.correct {
