@@ -35,7 +35,7 @@ function displayQuestion (question) {
         let answer_input = document.createElement("input");
         answer_input.setAttribute("type", "radio");
         answer_input.setAttribute("name", "answer");
-        answer_input.setAttribute("value", "answer.id");
+        answer_input.setAttribute("value", answer.id);
         answer_input.classList.add("answer");
 
         let answer_title = document.createTextNode(answer.answer);
@@ -46,6 +46,20 @@ function displayQuestion (question) {
         
     });
 }
+
+action_btn.addEventListener("click", function () {
+    let answers = document.getElementsByClassName("answer");
+    for (let i = 0; i < answers.length; i++) {
+        let answer = answers[i];
+        let question = questions[currentQuestion];
+
+        if (answer.checked && answer.value == question.correct) {
+            console.log("correct");
+            
+            answer.parentNode.classList.add("correct");
+        }
+    }
+});
 
 // Initialisation
 getQuestions();
